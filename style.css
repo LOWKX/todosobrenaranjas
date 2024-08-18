@@ -1,0 +1,111 @@
+* {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+nav ul {
+    background-color: orange;
+    margin: 0;
+    padding: 30px;
+    list-style: none;
+}
+
+nav ul li {
+    background-color: rgba(0, 0, 0, 0.082);
+    padding: 15px;
+    display: inline;
+    font-weight: bold;
+    margin-inline: 3px;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.555);
+    position: relative;
+}
+
+.title-container {
+    background-image: url(https://elpoderdelconsumidor.org/wp-content/uploads/2022/02/naranja-1.jpg);
+    background-size: cover;
+    padding: 50px;
+    height: 100px;
+    position: relative;
+}
+
+.title-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.title-container * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Explicacion de los Estilos:
+
+Explicación de los estilos:
+
+header: Se establece con position: relative para que el pseudo-elemento ::before de .title-container se posicione correctamente en relación con el contenedor.
+
+.title-container: Se configura con position: relative para permitir que el pseudo-elemento ::before cubra todo el contenedor y se coloque encima de la imagen de fondo.
+
+.title-container::before: Crea una capa sobre la imagen de fondo usando un color negro semitransparente. La opacidad (0.5 en este caso) puede ajustarse según el grado de oscurecimiento deseado.
+
+.title-container *: Asegura que cualquier contenido dentro de .title-container, como el texto, esté encima de la capa de oscurecimiento.
+
+*/
+
+.intro {
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+.info-section {
+    border-radius: 15px;
+    height: 450px;
+    padding: 30px;
+    margin: 50px;
+    color: white;
+    font-size: 17px;
+    background-image: url(https://huerto-en-casa.com/wp-content/uploads/2022/01/naranjo.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.info-section::before {
+    content: "";
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+    z-index: 1;
+}
+
+.info-section * {
+    position: relative;
+    z-index: 2;
+}
